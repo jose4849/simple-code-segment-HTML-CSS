@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<h2>Modal Example</h2>
+
+
+<!-- The Modal -->
+<div id="myModal1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="modalclose('myModal1')">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+
+<div id="myModal2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="modalclose('myModal2')">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+
+<button onclick="modalopen('myModal1')">Modal 1</button>
+<button onclick="modalopen('myModal2')">Modal 2</button>
+<script>
+function modalopen(modalid){
+var modal = document.getElementById(modalid);
+modal.style.display = "block";
+}
+function modalclose(modalid){
+var modal = document.getElementById(modalid);
+modal.style.display = "none";
+}
+</script>
+
+</body>
+</html>
